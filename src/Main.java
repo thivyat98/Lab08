@@ -33,11 +33,27 @@ class Node {
       static int sumOfLinkedList(SingleLinkedList list) {
          Node current = list.head;
          int sum = 0;
-         while (current != numm) {
+         while (current != num) {
              sum += current.data;
              current = current.next;
          }
          return sum;
+      }
+      static SingleLinkedList getPrimesWithDigit3( int n){
+         SingleLinkedList primeList = new SingleLinkedList();
+         SingleLinkedList primesWithDigit3List = new SingleLinkedList();
+
+         for(int i = 2; i <= n; i++){
+             if(isPrime(i)){
+                 primeList.insert(i);
+                 if (String.valueOf(i).contains("3")) {
+                     primesWithDigit3List.insert(i);
+                 }
+
+             }
+
+          }
+         return primesWithDigit3List;
       }
   }
 
