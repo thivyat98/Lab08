@@ -55,11 +55,15 @@ class Node {
           }
          return primesWithDigit3List;
       }
+
   }
 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int n = 1000;
+        SingleLinkedList primesWithDigit3List = SingleLinkedList.getPrimesWithDigit3(n);
+        int sum = sumOfLinkedList(primesWithDigit3List);
+        System.out.println("Sum of prime numbers with digit 3 between 0 and " + n + " is: " + sum);
     }
 }
