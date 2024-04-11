@@ -30,6 +30,15 @@ class Node {
          }
 
       }
+      static int sumOfLinkedList(SingleLinkedList list) {
+         Node current = list.head;
+         int sum = 0;
+         while (current != numm) {
+             sum += current.data;
+             current = current.next;
+         }
+         return sum;
+      }
   }
 
 
